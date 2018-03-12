@@ -1,10 +1,25 @@
 # bibliographer
 
- Enumerative bibliography is a procedure that identifies books in specific collection or library.
+"Enumerative bibliography is a procedure that identifies books in specific collection or library" (с)
 
- Bibliographer is a tool for preparing and converting names of your files. When called it collects arbitrary 'bad' filenames and open text tasks file for editing (like `git commit` command opens file with commit message for editing).
+# Что это такое и зачем нужно
+
+Я часто выкачиваю книги огромными собраниями, где лежат все написанные на данный момент произведения автора. К сожалению так же часто сами файлы называются как-то вроде `byoll_genrih_poezd_pribyvaet_po_raspisaniyu.fb2`.
+
+Этот скрипт изначально задумывался как инструмент для удобного переименования большого количества файлов. При запуске он ищет в указанной папке файлы с именами, написанными транслитом, после чего открывает файл со списком названий в редакторе Sublime Text.
+
+После того, как все названия в файле будут отредактированы, файл сохранен и вкладка с ним закрыта, будет запущено массовое переименование файлов в соответствии с указанными правильными названиями.
+
+
+# Requirements
+```
+$ pip install -r requirements.txt
+```
+Также необходим установленный редактор Sublime Text 3 (`brew cask install sublime-text` на OS X).
 
 # Usage
 ```
 $ python3 bibliographer.py move --dir-name=/path/to/dir
 ```
+
+
