@@ -2,20 +2,19 @@
 
 "Enumerative bibliography is a procedure that identifies books in specific collection or library" (с)
 
-# Что это такое и зачем нужно
+# What is it and what is it for
 
-Я часто выкачиваю книги огромными собраниями, где лежат все написанные на данный момент произведения автора. К сожалению так же часто сами файлы называются как-то вроде `byoll_genrih_poezd_pribyvaet_po_raspisaniyu.fb2`.
+I am quite often download huge book collections. It is really often case for file names to be like `byoll_genrih_poezd_pribyvaet_po_raspisaniyu.fb2`.
 
-Этот скрипт изначально задумывался как инструмент для удобного переименования большого количества файлов. При запуске он ищет в указанной папке файлы с именами, написанными транслитом, после чего открывает файл со списком названий в редакторе Sublime Text.
-
-После того, как все названия в файле будут отредактированы, файл сохранен и вкладка с ним закрыта, будет запущено массовое переименование файлов в соответствии с указанными правильными названиями.
+This library was a simple script for batch renaming at first. You run the script, it search for files with names encoded with translit (it is the method of encoding Cyrillic letters with Latin ones), collect the names and opens file with names. You edit the names, save and close the file and then script rename all the files listed in the file.
 
 
 # Requirements
 ```
 $ pip install -r requirements.txt
 ```
-Также необходим установленный редактор Sublime Text 3 (`brew cask install sublime-text` на OS X).
+# Non-python requirements
+`$ brew cask install sublime-text`
 
 # Usage
 ```
@@ -23,3 +22,8 @@ $ python3 bibliographer.py move --dir-name=/path/to/dir
 ```
 
 
+# To do
+- [] convert script to python package
+- [] Makefile, tests
+- [] migrate from Fire to plumbub
+- [] changelog
