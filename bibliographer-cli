@@ -16,10 +16,10 @@ class BibliographerCLI:
     Also bibliographer can replace short dashes in file name with long one.
     """
     def move(self, dir_name, dry_run=False):
-        main(dir_name, dry_run)
+        main(dir_name, dry_run is not False)
 
     def replace_dashes(self, dir_name, dry_run=False):
-        replace_dashes_in_path(dir_name, dry_run)
+        replace_dashes_in_path(dir_name, dry_run is not False)
 
 
 if __name__ == '__main__':
