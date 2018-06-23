@@ -16,11 +16,6 @@ $ pip install -r requirements.txt
 # Non-python requirements
 `$ brew cask install sublime-text`
 
-# Usage
-```
-$ python3 bibliographer.py move --dir-name=/path/to/dir
-```
-
 
 # To do
 - [] convert script to python package

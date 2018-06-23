@@ -1,0 +1,28 @@
+#! /usr/bin/env python3
+
+import fire
+
+from bibliographer.issues_with_non_cyrillic_symbols import main
+from bibliographer.dashes import replace_dashes_in_path
+
+
+class BibliographerCLI:
+    """
+    CLI for bibliographer util.
+
+    bibliographer is a tool for batch renaming files that are encoded with translit
+    (method of encoding Cyrillic letters with Latin ones).
+
+    Also bibliographer can replace short dashes in file name with long one.
+    """
+    def move(self, dir_name, dry_run=False):
+        main(dir_name, dry_run)
+
+    def replace_dashes(self, dir_name, dry_run=False):
+        replace_dashes_in_path(dir_name, dry_run)
+
+
+if __name__ == '__main__':
+    # гугловский фреймворк для создания cli
+    # решил попробовать для разнообразия
+    fire.Fire(BibliographerCLI)
